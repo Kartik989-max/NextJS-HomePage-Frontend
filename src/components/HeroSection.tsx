@@ -58,7 +58,7 @@ interface HeroSectionProps {
       link: string;
     }[];
   }
-export function HeroSection({ title, subtitle, ctaButtons }: HeroSectionProps) {
+export function HeroSection({ title, subtitle }: HeroSectionProps) {
   return (
     <section className="relative min-h-[90vh] flex flex-col gap-20 items-center justify-center bg-gradient-to-b from-background to-background/80 overflow-hidden">
       <div className="container flex items-center w-auto gap-20 px-4 md:px-6">
