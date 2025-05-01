@@ -224,9 +224,9 @@ export default function AdminPage() {
     })
   );
 
-  const handleDragEnd = (event: any) => {
+  const handleDragEnd = (event: import("@dnd-kit/core").DragEndEvent) => {
     const { active, over } = event;
-    if (active.id !== over.id) {
+    if (over && active.id !== over.id) {
       const oldIndex = sections.findIndex((s) => s._id === active.id);
       const newIndex = sections.findIndex((s) => s._id === over.id);
       const reordered = arrayMove(sections, oldIndex, newIndex).map((section, idx) => ({
